@@ -1,21 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom progress bar styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #fff; /* White for unplayed portion */
+  border-radius: 5px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #fff; /* White for unplayed portion */
+  height: 6px;
+  border-radius: 5px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: red; /* Red for the thumb */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  background: #fff; /* White for unplayed portion */
+  height: 6px;
+  border-radius: 5px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: red; /* Red for the thumb */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
 }
