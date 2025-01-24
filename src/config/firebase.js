@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: NEXT_PUBLIC_FIREBASE_API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "rejection-hub.firebaseapp.com",
   projectId: "rejection-hub",
   storageBucket: "rejection-hub.firebasestorage.app",
-  messagingSenderId: NEXT_PUBLIC_MESSAGING_SENDER_ID,
-  appId: NEXT_PUBLIC_API_ID_KEY,
-  measurementId: NEXT_PUBLIC_MEASUREMENT_ID
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_API_ID_KEY,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
 
 // Initialize Firebase
